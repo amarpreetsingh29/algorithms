@@ -4,7 +4,11 @@
 
 import smallest from './smallest';
 
-function tSort(input,result) {
+function tSort(input) {
+    return util(JSON.parse(JSON.stringify(input)));
+}
+
+function util(input,result) {
     var result = result || [];
     for(let i=0; i<input.length; i++){
        let elm = smallest(input,result);
