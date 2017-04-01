@@ -7,7 +7,7 @@
  * @param input
  * Find and return the smallest element from an array in O(n)
  */
-export function smallest(input){
+export default function smallest(input){
     if(input.length){
         let smallest = input[0];
         for(let i=0;i<input.length;i++){

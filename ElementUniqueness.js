@@ -2,9 +2,9 @@
  * Created by samarpreet on 02/04/17.
  */
 
-import {tSort} from './sort';
+import tSort from './sort';
 
-export function elementUniqueness(input) {
+export default function elementUniqueness(input) {
     if(input && input.length){
         var input = tSort(input); //sort it
         let result =new Array();

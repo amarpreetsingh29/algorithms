@@ -2,9 +2,9 @@
  * Created by samarpreet on 27/03/17.
  */
 
-import {smallest} from './smallest';
+import smallest from './smallest';
 
-export function tSort(input) {
+export default function tSort(input) {
     return util(JSON.parse(JSON.stringify(input)));
 }
 

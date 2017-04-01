@@ -8,7 +8,7 @@
  * @param input
  */
 
-export function flattenArray(input,result){
+export default function flattenArray(input,result){
     var result = result || [];
     for(let i =0; i < input.length;i++){
         if(typeof  input[i] !== "object"){

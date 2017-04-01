@@ -2,9 +2,9 @@
  * Created by samarpreet on 01/04/17.
  */
 
-import {tSort} from './sort';
+import tSort from './sort';
 
-export function closestPair(input) {
+export default function closestPair(input) {
     if(input && input.length){
         var input = tSort(input);  // sort it
         let dif = Number.MAX_VALUE;
