@@ -6,12 +6,15 @@ import tSort from './sort';
 
 export default function elementUniqueness(input) {
     if(input && input.length){
-        var input = tSort(input); //sort it
-        let result =new Array();
+        var input = sort(input); //sort it
+        let result =new Object();
+        //sweep it
         for(let i =0;i<input.length;i++){
-            let dif = Math.abs(input[i] - input[i+1]);
-            if( dif === 0){
-                result.push(input[i]);
+            if(!result[i]){
+                let dif = Math.abs(input[i] - input[i+1]);
+                if( dif === 0){
+                    result[input[i]]=input[i];
+                }
             }
         }
         return result;
