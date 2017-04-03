@@ -9,7 +9,7 @@ export default function elementUniqueness(input) {
         var input = sort(input); //sort it
         let result =new Object();
         //sweep it
-        for(let i =0;i<input.length;i++){
+        for(let i =0;i<input.length-1;i++){
             if(!result[i]){
                 let dif = Math.abs(input[i] - input[i+1]);
                 if( dif === 0){
