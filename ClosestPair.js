@@ -9,7 +9,7 @@ export default function closestPair(input) {
         var input = tSort(input);  // sort it
         let dif = Number.MAX_VALUE;
         let result =new Array();
-        for(let i =0;i<input.length;i++){
+        for(let i =0;i<input.length-1;i++){
             let temp = Math.abs(input[i] - input[i+1]);
             if(temp < dif){
                 dif = temp;
