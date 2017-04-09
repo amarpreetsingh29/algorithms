@@ -80,7 +80,25 @@ function SearchBST(tree,elm) {
 }
 
 
-
+/**
+ *
+ *
+ tree *search_tree(tree *l, item_type x)
+ {
+         if (l == NULL) return(NULL);
+         if (l->item == x) return(l);
+         if (x < l->item)
+            return( search_tree(l->left, x) );
+         else{
+             return( search_tree(l->right, x) );
+         }
+ }
+ * @param tree
+ * @param elm
+ * @returns {boolean}
+ *
+ * time Complexity O(h)
+ */
 function recursiveSearchBST(tree,elm) {
     if(!tree) return false;
     else{
@@ -104,4 +122,14 @@ function recursiveSearchBST(tree,elm) {
     }
 }
 
-console.log(recursiveSearchBST(BinarySearchTree([5,1,4,2,8,11]),11));
+
+function minimumInBST(tree){
+    if(!tree.left) return tree.data;
+    else return minimumInBST(tree.left);
+}
+function maximumInBST(tree) {
+    if(!tree.right) return tree.data;
+    else return maximumInBST(tree.right);
+}
+
+console.log(maximumInBST(BinarySearchTree([5,1,4,2,8,11,0])));
