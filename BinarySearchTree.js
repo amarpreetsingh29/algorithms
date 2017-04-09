@@ -71,12 +71,12 @@ function SearchBST(tree,elm) {
                 break;
             }
         }else if( elm == pointer.data){
-            break;
+            return pointer; // return node if found
         }else{
             break;
         }
     }
-    return flag ? true : false;
+    return flag; //return false if not found
 }
 
 
@@ -115,7 +115,7 @@ function recursiveSearchBST(tree,elm) {
                 return false;
             }
         }else if( elm == tree.data){
-            return true;
+            return tree;
         }else{
             return false;
         }
@@ -132,4 +132,4 @@ function maximumInBST(tree) {
     else return maximumInBST(tree.right);
 }
 
-console.log(maximumInBST(BinarySearchTree([5,1,4,2,8,11,0])));
+console.log(recursiveSearchBST(BinarySearchTree([5,1,4,2,8,11,0]),0));
