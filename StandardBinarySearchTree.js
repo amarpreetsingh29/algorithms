@@ -61,42 +61,9 @@ function BST(input) {
         //To-Do
     }
 
-    createBST.call(this,input);
     function createBST(input){
-        var pointer;
         if(input && input.length){
-            //this.tree = new Object();
             for (var i = 0; i < input.length; i++) {
-                /*pointer = this.tree;
-                if (Object.keys(this.tree).length) {
-                    while (true) {
-                        //less
-                        if (input[i] < pointer.data) {
-                            if (pointer.left) {
-                                pointer = pointer.left;  // reducing
-                                continue;
-                            } else {
-                                pointer.left = createNode(input[i]);
-                                break;
-                            }
-                        } //more
-                        else if (input[i] > pointer.data) {
-                            if (pointer.right) {
-                                pointer = pointer.right;  //reducing
-                                continue;
-                            } else {
-                                pointer.right = createNode(input[i]);
-                                break;
-                            }
-                        } //invalid value
-                        else {
-                            break;
-                        }
-                    }
-                } else {
-                    this.tree = createNode(input[i]);
-                    pointer = this.tree;
-                }*/
                 this.insertNode(input[i]);
             }
         }
@@ -129,6 +96,7 @@ function BST(input) {
         else return maximumInBST(tree.right);
     }
 
+    createBST.call(this,input);
 };
 var ref  = new BST([3,5,8,1,9,2]);
 var ref2 = new BST();
