@@ -14,5 +14,5 @@ function optimizedElmFreq(input) {
     return result;
 }
 
-console.log(elementFrequency([3,1,5,3,7,1,8,8]));
+
 console.log(optimizedElmFreq([3,1,5,3,7,1,8,8]));
