@@ -5,9 +5,10 @@
 
 function BinarySearch2(input,elm,start,end) {
     var start=start||0, end=end||input.length;
+    if(start>end) return -1;
     let middle = parseInt((start+end)/2);
     if(elm === input[middle]){
-        return input[middle];
+        return middle;
     }else if(elm > input[middle]){
         start = middle+1;
     }else if(elm <  input[middle]){
@@ -16,4 +17,4 @@ function BinarySearch2(input,elm,start,end) {
     return BinarySearch2(input,elm,start,end);
 }
 
-console.log(BinarySearch2([1,2,3,4],4));
+console.log(BinarySearch2([1,2,3,5],4));
