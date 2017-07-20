@@ -22,7 +22,21 @@ var sampleGraphStructure={
         "edgeList": []
     }
 }
-
+function findConnection(graph,from,to) {
+    var temp = graph[from];
+    var i;
+    console.log(from);
+    if( !temp || !to || temp['visited']  || !temp.edgeList.length){
+        return false;
+    }
+    temp['visited'] = true;
+    if(temp.edgeList.indexOf(to) !== -1) return true;
+    for(i=0;i<temp.edgeList.length;i++){
+        var status = findConnection(graph,temp.edgeList[i],to);
+        if(status) return true;
+    }
+    return false;
+}
 function dfs(graph) {
     var vertex;
     var time =0;
@@ -53,3 +67,4 @@ function isVertexVisited(graph,vertex){
     return graph[vertex].visited ? true : false;
 }
 
+console.log(dfs(sampleGraphStructure));
