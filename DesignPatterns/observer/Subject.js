@@ -1,8 +1,9 @@
+module.exports = (function(){
 function Subject() {
     this.events = {};
-    function removeAllEvents() {
-        this.events = {};
-    }
+}
+function RemoveAllEvents(){
+    this.events={};
 }
 Subject.prototype.on = function (evt, cb, listener) {
     this.events[evt] = this.events[evt] || [];
@@ -36,9 +37,11 @@ Subject.prototype.off = function (evt, cb, listener) {
 }
 
 Subject.prototype.trigger = function (evt) {
-    this.events[evt].forEach(function (element) {
+    this.events[evt] && this.events[evt].forEach(function (element) {
         element.method.call(element.listener)
     }, this);
 }
+return Subject;
+})();
 
-module.exports = Subject;
+

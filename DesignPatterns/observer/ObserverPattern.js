@@ -1,5 +1,5 @@
- const Events = {
+ const ObserverPattern = {
         subject:require("./Subject"),
         observer:require("./Observer")
     };
-module.exports = Events;
+module.exports = ObserverPattern;

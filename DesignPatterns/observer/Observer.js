@@ -1,11 +1,14 @@
+module.exports = (function(){
 function Observer(){
     this.events={};
 }
-Observer.prototype.listenTo = function(publisher, evt, cb){
-    publisher.on(evt,cb,this);
+Observer.prototype.listenTo = function(subject, evt, cb){
+    subject.on(evt,cb,this);
 }
-Observer.prototype.stopListening = function(publisher,evt, cb){
-    publisher.off(evt,cb,this);
+Observer.prototype.stopListening = function(subject,evt, cb){
+    subject.off(evt,cb,this);
 }
-module.exports = Observer;
+return Observer;
+})();
+
 
