@@ -1,3 +1,3 @@
 # algorithms
 
-Implementation of Data Structures and algorithms in Javascript
+Implementation of Design Patterns, Data Structure and algorithms in Javascript
