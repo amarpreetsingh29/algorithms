@@ -2,23 +2,40 @@
  * Created by samarpreet on 04/04/17.
  */
 
-function createLinkedList(input,start) {
-    var obj =  new Object();
-    var start = start||0;
+//Recursive Pattern
+function createLinkedList(input, start) {
+    var obj=null;
+    if (input instanceof Array && input.length) {
+        obj = new Object();
+        var start = start || 0;
 
-    // solution for base case
-    if(start >= input.length) return null;
+        // solution for base case
+        if (start >= input.length) return null;
 
         //Each case is handled correctly
-    else {
-        obj['data'] = input[start];
-        obj['next'] = createLinkedList(input,++start);  // problem gets smaller each time
+        else {
+            obj['data'] = input[start];
+            obj['next'] = createLinkedList(input, ++start);  // problem gets smaller each time
+        }
     }
-
     return obj;
 }
 
-console.log(createLinkedList([1,2,3,4,5]));
-
-
+//Iterative pattern
+function iterativeLinkedList(input) {
+    var linkedList = null;
+    if (input instanceof Array && input.length) {
+        var i,temp;
+        i = input.length - 1;
+        for (; i != -1; i--) {
+            temp = {
+                data: input[i],
+                next: null
+            }
+            temp.next = linkedList;
+            linkedList = temp;
+        }
+    }
+    return linkedList;
+}
 
