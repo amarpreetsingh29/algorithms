@@ -1,7 +1,7 @@
 
 /** 
  * function inner does not have a closure, 
- * as it does not access any varibale 
+ * as it does not access any variable 
  * from function top. 
 */
 
@@ -16,12 +16,12 @@ function top() {
 
 /** 
  * function inner does have a closure, 
- * as it is accessing  varibale a
+ * as it is accessing  variable a
  * from function top2.
  * During creation phase,
- *  The compiler(v8,chakra) does a lexical analysis of code, 
+ *  The js enginer/compiler(v8,chakra etc) does a lexical analysis of code, 
  * and identifies the closure variables and 
- * allocates them memory on heap .
+ * allocates memory for them on heap .
 */
 
 function top2() {
@@ -35,7 +35,7 @@ function top2() {
 /**
  *  Inner function even being returned,
  *  will have a closure with only property a not b.
- * 
+ *  
  */
 
 function top3() {
