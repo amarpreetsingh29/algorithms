@@ -46,3 +46,21 @@ function top3() {
     return inner;
 }
 
+/**
+ * The level of nesting is directly proportional to number of closures created for a function.
+ * Inner 1 has 1 closure  -> top4(a)
+ * Inner 2 has 2 closures -> inner1(b) and top4(a)
+ */
+
+function top4(){
+    var a;
+    function inner1(){
+        var b;
+        function inner2(){
+            console.log(a,b);
+        }
+        inner2();
+    }
+    inner1();
+}
+top4();
