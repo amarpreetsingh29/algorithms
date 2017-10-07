@@ -4,7 +4,7 @@
 
 //Recursive Pattern
 function createLinkedList(input, start) {
-    var obj=null;
+    var obj = null;
     if (input instanceof Array && input.length) {
         obj = new Object();
         var start = start || 0;
@@ -25,7 +25,7 @@ function createLinkedList(input, start) {
 function iterativeLinkedList(input) {
     var linkedList = null;
     if (input instanceof Array && input.length) {
-        var i,temp;
+        var i, temp;
         i = input.length - 1;
         for (; i != -1; i--) {
             temp = {
@@ -38,4 +38,22 @@ function iterativeLinkedList(input) {
     }
     return linkedList;
 }
+var t = iterativeLinkedList([2, 3])
 
+//search
+
+function search(list, key) {
+    if (list instanceof iterativeLinkedList && key) {
+        var temp = list;
+        do {
+            if (temp.data === key) {
+                return temp;
+            } else {
+                temp = temp.next;
+            }
+        } while (temp != null);
+    }
+}
+
+var r = search(t, 3);
+console.log(r);

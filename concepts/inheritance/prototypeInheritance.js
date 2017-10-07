@@ -16,7 +16,6 @@ var child = {
  */
 Object.setPrototypeOf(child, parent);
 
-
 /**
  * Object.create
  */
@@ -32,7 +31,7 @@ var temp1 = {
  * finally returns the address of new object 
  * to which identifier child points.
  */
-var child = Object.create(String);
+var child = Object.create(temp1);
 
 
 /**

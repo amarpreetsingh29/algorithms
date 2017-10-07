@@ -48,7 +48,7 @@ function top3() {
 
 /**
  * The level of nesting is directly proportional to number of closures created for a function.
- * Inner 1 has 1 closure  -> top4(a)
+ * Inner 1 has 1 closure  -> top4 with prop a.
  * Inner 2 has 2 closures -> inner1(b) and top4(a)
  */
 
@@ -63,4 +63,4 @@ function top4(){
     }
     inner1();
 }
-top4();
+

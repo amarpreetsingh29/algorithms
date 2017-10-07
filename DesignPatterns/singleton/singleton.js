@@ -1,4 +1,5 @@
 var service=(function(){
+    "use strict";
     var instance;
     function service(){
         if(!instance){
@@ -13,6 +14,6 @@ var service=(function(){
     return service;
 })();
 
-var s1=new service();
+var s1= service();
 var s2=new service();
 console.log(s1 === s2); //true
