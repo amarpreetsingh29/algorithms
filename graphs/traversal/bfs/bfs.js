@@ -47,7 +47,7 @@ function processVertex(vertex) {
   console.log(vertex)
 }
 function addEdgesToRunningQueue(graph, node, queue) {
-  let edgeList
+  let edgeList,vertex
   edgeList = graph[node].edgeList
   for (var i = 0; i < edgeList.length; i++) {
     vertex = edgeList[i]
