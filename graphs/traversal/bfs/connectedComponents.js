@@ -1,19 +1,12 @@
-var sampleGraphStructure = {
-    1: {
-      edgeList: ['2', '5', '6']
-    },
-    6: {
-      edgeList: ['1']
-    },
-    5: {
-      edgeList: ['1', '2', '4']
-    },
-    3: {
-      edgeList: ['2', '4']
-    },
-    4: { edgeList: ['5', '3'] },
-    2: { edgeList: ['1', '3', '5'] }
-}
+
+  var sampleGraphStructure = {
+    1: ['2', '5', '6'],
+    6: ['1'],
+    5: ['1', '2', '4'],
+    3: ['2', '4'],
+    4: ['5', '3'] ,
+    2: ['1', '3', '5'] 
+  }
 
 function connectedComponentsBFS(graph) {
     let prop, running_Queue, vertex, edges, counter

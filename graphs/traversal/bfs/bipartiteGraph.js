@@ -1,18 +1,11 @@
-var sampleGraphStructure = {
-    1: {
-      edgeList: ['2', '5', '6']
-    },
-    6: {
-      edgeList: ['1']
-    },
-    5: {
-      edgeList: ['1', '2', '4']
-    },
-    3: {
-      edgeList: ['2', '4']
-    },
-    4: { edgeList: ['5', '3'] },
-    2: { edgeList: ['1', '3', '5'] }
+
+  var sampleGraphStructure = {
+    1: ['2', '5', '6'],
+    6: ['1'],
+    5: ['1', '2', '4'],
+    3: ['2', '4'],
+    4: ['5', '3'] ,
+    2: ['1', '3', '5'] 
   }
 
   function bipartateGraph(graph,node) {
@@ -41,7 +34,7 @@ var sampleGraphStructure = {
   
   function addBipartiteEdgesToRunningQueue(graph, node, queue) {
     let edgeList
-    edgeList = graph[node].edgeList
+    edgeList = graph[node]
     for (var i = 0; i < edgeList.length; i++) {
       vertex = edgeList[i]
       if (!graph[vertex].color) {
